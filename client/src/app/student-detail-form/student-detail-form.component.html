@@ -1,0 +1,70 @@
+<div class="container">
+    <form #studentDetailForm="ngForm" (ngSubmit)="onDetailsSubmit(studentDetailForm)">
+        <input type="hidden" name="id"
+        [value]="studentService.formData.id">
+        <div class="form-group">
+            <label> FIRST NAME </label>
+            <input type="text" class="form-control form-control-lg"
+            [value]="studentService.formData.firstName" name="firstName"
+            #firstName="ngModel" [(ngModel)]="studentService.formData.firstName" >
+        </div>
+        <div class="form-group">
+            <label> LAST NAME </label>
+            <input type="text" class="form-control form-control-lg"
+            [value]="studentService.formData.lastName" name="lastName"
+            #lastName="ngModel" [(ngModel)]="studentService.formData.lastName" >
+        </div>
+        <div class="form-group">
+            <label> AGE </label>
+            <input type="text" class="form-control form-control-lg"
+            [value]="studentService.formData.age" name="age"
+            #age="ngModel" [(ngModel)]="studentService.formData.age" >
+        </div>
+        <div class="form-group">
+            <label> GENDER </label>
+            <input type="text" class="form-control form-control-lg"
+            [value]="studentService.formData.gender" name="gender"
+            #gender="ngModel" [(ngModel)]="studentService.formData.gender" >
+        </div>
+        <div class="form-group">
+            <label> BRANCH </label>
+            <input type="text" class="form-control form-control-lg"
+            [value]="studentService.formData.branch" name="branch"
+            #branch="ngModel" [(ngModel)]="studentService.formData.branch" >
+        </div>
+        <div class="form-group">
+            <label> EMAIL </label>
+            <input type="text" class="form-control form-control-lg"
+            [value]="studentService.formData.email" name="email"
+            #email="ngModel" [(ngModel)]="studentService.formData.email" >
+        </div>
+        <div class="form-group">
+            <label> CONTACT NO. </label>
+            <input type="text" class="form-control form-control-lg"
+            [value]="studentService.formData.contactNumber" name="contactNumber"
+            #contactNumber="ngModel" [(ngModel)]="studentService.formData.contactNumber" >
+        </div>
+        <div class="form-group">
+            <label> FATHER's NAME </label>
+            <input type="text" class="form-control form-control-lg"
+            [value]="studentService.formData.fathersName" name="fathersName"
+            #fathersName="ngModel" [(ngModel)]="studentService.formData.fathersName" >
+        </div>
+        <div class="form-group">
+            <label> MOTHER's NAME </label>
+            <input type="text" class="form-control form-control-lg"
+            [value]="studentService.formData.mothersName" name="mothersName"
+            #mothersName="ngModel" [(ngModel)]="studentService.formData.mothersName" >
+        </div>
+        <div class="form-group">
+            <label> HOBBIE </label>
+            <input type="text" class="form-control form-control-lg"
+            [value]="studentService.formData.hobbie" name="hobbie"
+            #hobbie="ngModel" [(ngModel)]="studentService.formData.hobbie" >
+        </div>    
+        <div class="row">
+            <button type="submit" class="btn btn-success col-md-6"> SUBMIT </button>
+            <button (click)="onCancelForm()" class="btn btn-danger col-md-6"> CANCEL </button>
+        </div>
+    </form>
+</div>

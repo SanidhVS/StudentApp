@@ -1,0 +1,36 @@
+<table class="table">
+    <thead class="thead-light">
+        <tr>
+            <th>FIRST NAME</th>
+            <th>LAST NAME </th>
+            <th>AGE</th>
+            <th>GENDER</th>
+            <th>BRANCH</th>
+            <th>EMAIL</th>
+            <th>CONTACT NO.</th>
+            <th>FATHER's NAME</th>
+            <th>MOTHER's NAME</th>
+            <th>HOBBIE</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let student of studentService.studentList">
+            <td>{{student.firstName}}</td>
+            <td>{{student.lastName}}</td>
+            <td>{{student.age}}</td>
+            <td>{{student.gender}}</td>
+            <td>{{student.branch}}</td>
+            <td>{{student.email}}</td>
+            <td>{{student.contactNumber}}</td>
+            <td>{{student.fathersName}}</td>
+            <td>{{student.mothersName}}</td>
+            <td>{{student.hobbie}}</td>
+            <td>
+                <i class="fa fa-trash" (click)="deleteStudentrecord(student.id)"></i>
+            </td>
+            <td>
+                <i class="fa fa-edit" (click)="populateStudentForm(student)"></i>
+            </td>
+        </tr>
+    </tbody>
+</table>
